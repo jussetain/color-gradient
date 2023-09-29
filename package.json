@@ -1,11 +1,13 @@
 {
   "name": "smooth-gradient",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Generates a gradient and can return a calculated color from an input",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "start": "node src/index.js",
+    "test": "node src/test.js",
+    "build": "webpack --mode=production"
   },
   "deprecated": false,
   "author": {
@@ -24,5 +26,9 @@
     "type": "git",
     "url": "git+git@github.com:jussetain/color-gradient.git",
     "web": "https://github.com/jussetain/color-gradient/"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
