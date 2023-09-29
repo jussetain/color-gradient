@@ -1,4 +1,4 @@
-import Gradient from "./index.js";
+const Gradient = require('./Gradient.js')
 
 const gradient = new Gradient("#FF0000", "#00FF00", "#00FFFF", "#123456");
 

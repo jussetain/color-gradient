@@ -1,4 +1,4 @@
-export class Color {
+class Color {
   constructor(hex) {
     const curated_hex = hex.replace('#', '');
     if (curated_hex.length !== 3 && curated_hex.length !== 6) {
@@ -29,3 +29,6 @@ export class Color {
     return hex;
   };
 }
+
+module.exports = Color;
+

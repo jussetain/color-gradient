@@ -1,6 +1,6 @@
-import { Color } from "./Color.js";
+const Color = require('./Color.js');
 
-export default class Gradient {
+class Gradient {
   constructor(...hexs) {
     this.colors = [];
     for (const hex of hexs) {
@@ -84,3 +84,5 @@ export default class Gradient {
     return [red, green, blue];
   }
 }
+
+module.exports = Gradient;
