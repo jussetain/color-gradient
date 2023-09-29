@@ -77,7 +77,6 @@ const updateFrame = (value) => {
     let element = document.createElement('span');
     element.className = "orange";
     element.innerHTML = `"${colors[i]}"`;
-    console.log(colors[i]);
     document.getElementById('colors-code').append(element, i < colors.length - 1 ? "," : "")
   }
   document.getElementById('number-code').innerHTML = value;
