@@ -1,3 +1,3 @@
 const Gradient = require('./Gradient.js')
 
-export default Gradient;
+module.exports = Gradient;
