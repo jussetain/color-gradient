@@ -1,0 +1,38 @@
+
+color-gradient.js
+========================
+
+Calculate a gradient and get one of its colors at a given point, from an array of colors.
+
+Install the color-gradient module
+---------------------------------
+
+```bash
+npm install color-gradient
+```
+
+Add it to your source.
+
+```javascript
+import Gradient from "color-gradient"
+```
+
+Usage
+--------------------
+
+A single class is exposed, `Gradient`, which takes as much color elements as you want as parameters, and the amount of steps to use.
+
+```javascript
+// Colors can be given as an unlimited number of parameters
+const gradient = new Gradient("#FF0000", "#00FF00", "#00FFFF", "#123456");
+```
+
+You can now retreive the color corresponding to your input in the gradiant spectrum.
+Only values between 0 and 100 are effective. Negatives will be considered as 0 and values above 100 as 100.
+
+```javascript
+const color = gradient.getColorFromValue(50);
+console.log(color); // output => #b400b4
+```
+
+This package could be a great fit for gradients in progress bars, for example.

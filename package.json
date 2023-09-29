@@ -1,0 +1,29 @@
+{
+  "name": "color-gradient",
+  "version": "1.0.0",
+  "description": "Generates a gradient and can return a calculated color from an input",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "deprecated": false,
+  "author": {
+    "name": "jussetain"
+  },
+  "bugs": {
+    "url": "https://github.com/jussetain/color-gradient/issues"
+  },
+  "licence": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jussetain/color-gradient/MIT.LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:jussetain/color-gradient.git",
+    "web": "https://github.com/jussetain/color-gradient/"
+  }
+}
