@@ -1,6 +1,6 @@
 {
   "name": "smooth-gradient",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Generates a gradient and can return a calculated color from an input",
   "type": "module",
   "main": "src/index.js",
