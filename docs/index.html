@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css”>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -36,11 +37,34 @@
           <div class="value" id="hex">#------</div>
         </div>
       </div>
+      <div class="code">
+        <div>
+          <span class="pink">import</span> <span class="lblue">Gradient</span> <span class="pink">from</span> <span
+            class="orange">"smooth-gradient"</span>;
+        </div>
+        <div>
+          <span class="dblue">const</span> <span class="blue">gradient</span> = <span class="dblue">new</span> <span
+            class="green">Gradient</span><span class="yellow">(</span><span id="colors-code">caca</span><span
+            class="yellow">)</span>;
+        </div>
+        <div>
+          <span class="dblue">const</span> <span class="blue">color</span> = <span class="blue">gradient</span>.<span
+            class="lyellow">getColorFromValue</span><span class="pink">(</span><span class="number"
+            id="number-code">50</span><span class="pink">)</span>;
+        </div>
+        <div>
+          <span class="lblue">console</span>.<span class="lyellow">log</span><span class="yellow">(</span><span
+            class="blue">color</span><span class="yellow">)</span>; <span class="comment" id="comment-code">// Output :
+            #FF0000</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/smooth-gradient@2.3.1/dist/index.js"></script>
+  <script src=”https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js”></script>
   <script src="./index.js"></script>
+
 </body>
 
 </html>

@@ -71,6 +71,18 @@ const updateFrame = (value) => {
   document.getElementById('val').innerHTML = value + "%";
 
   document.getElementById('selector').style.backgroundColor = color;
+
+  document.getElementById('colors-code').innerHTML = '';
+  for (let i = 0; i < colors.length; i++) {
+    let element = document.createElement('span');
+    element.className = "orange";
+    element.innerHTML = `"${colors[i]}"`;
+    console.log(colors[i]);
+    document.getElementById('colors-code').append(element, i < colors.length - 1 ? "," : "")
+  }
+  document.getElementById('number-code').innerHTML = value;
+  document.getElementById('comment-code').innerHTML = `// Output : ${colorHex}`;
+
   //document.getElementById('selector').style.border = `4px solid ${color}`;
   //document.getElementById('gradients').style.border = `4px solid ${color}`;
 }
@@ -89,3 +101,8 @@ document.getElementById('gradients').addEventListener("mousemove", (event) => {
   updateFrame(value);
 
 });
+
+window.onload = () => {
+  hljs.highlightAll();
+}
+
