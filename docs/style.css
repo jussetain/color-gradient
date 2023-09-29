@@ -6,7 +6,8 @@
 
 html,
 body {
-  height: 100%;
+  padding: 30px 0px;
+  min-height: 100%;
   width: 100%;
   background: rgb(14, 14, 17);
   background: linear-gradient(147deg, rgba(14, 14, 17, 1) 0%, rgba(50, 47, 69, 1) 100%);
