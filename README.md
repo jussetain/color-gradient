@@ -14,7 +14,7 @@ npm install smooth-gradient
 Add it to your source.
 
 ```javascript
-import Gradient from "smooth-gradient"
+import { Gradient } from "smooth-gradient"
 ```
 
 Usage
