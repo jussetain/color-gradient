@@ -17,6 +17,10 @@ h1 {
   font-size: 5em;
 }
 
+h3 {
+  margin-left: 7px;
+}
+
 .container {
   height: 100%;
   width: 100%;
