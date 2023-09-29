@@ -1,5 +1,5 @@
 import Gradient from "./index.js";
 
-const gradient = new Gradient("#FF0000", "#0000FF");
+const gradient = new Gradient("#FF0000", "#00FF00", "#00FFFF", "#123456");
 
-console.log(gradient.getColorFromValue(50, 'rgb'))
+console.log(gradient.getColorFromValue(50));

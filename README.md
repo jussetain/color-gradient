@@ -1,20 +1,20 @@
 
-color-gradient.js
+smooth-gradient.js
 ========================
 
 Calculate a gradient and get one of its colors at a given point, from an array of colors.
 
-Install the color-gradient module
+Install the smooth-gradient module
 ---------------------------------
 
 ```bash
-npm install color-gradient
+npm install smooth-gradient
 ```
 
 Add it to your source.
 
 ```javascript
-import Gradient from "color-gradient"
+import Gradient from "smooth-gradient"
 ```
 
 Usage
@@ -31,8 +31,10 @@ You can now retreive the color corresponding to your input in the gradiant spect
 Only values between 0 and 100 are effective. Negatives will be considered as 0 and values above 100 as 100.
 
 ```javascript
-const color = gradient.getColorFromValue(50);
-console.log(color); // output => #b400b4
+const color = gradient.getColorFromValue(50, 'rgb');
+const colorHex = gradient.getColorFromValue(50);
+console.log(color); // output => rgb(0, 255, 180)
+console.log(colorHex); // output => #00ffb4
 ```
 
 This package could be a great fit for gradients in progress bars, for example.
