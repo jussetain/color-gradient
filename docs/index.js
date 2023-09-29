@@ -59,16 +59,7 @@ document.getElementById('selector').style.backgroundColor = color;
  * HOVER
  */
 
-document.getElementById('gradients').addEventListener("mousemove", (event) => {
-  const { x } = event;
-  const { width } = document.getElementById('gradients').getBoundingClientRect();
-  const position = x - document.getElementById('gradients').getBoundingClientRect().x;
-  const value = Math.floor(position * 100 / width);
-
-  if (value < 0) value = 0;
-  if (value > 100) value = 100;
-
-
+const updateFrame = (value) => {
   document.getElementById('selector').style.left = `${value - 1}%`;
   const color = gradient.getColorFromValue(value, 'rgb');
   const colorHex = gradient.getColorFromValue(value, 'hex');
@@ -82,4 +73,19 @@ document.getElementById('gradients').addEventListener("mousemove", (event) => {
   document.getElementById('selector').style.backgroundColor = color;
   //document.getElementById('selector').style.border = `4px solid ${color}`;
   //document.getElementById('gradients').style.border = `4px solid ${color}`;
+}
+
+updateFrame(randomValue(20, 80));
+
+document.getElementById('gradients').addEventListener("mousemove", (event) => {
+  const { x } = event;
+  const { width } = document.getElementById('gradients').getBoundingClientRect();
+  const position = x - document.getElementById('gradients').getBoundingClientRect().x;
+  const value = Math.floor(position * 100 / width);
+
+  if (value < 0) value = 0;
+  if (value > 100) value = 100;
+
+  updateFrame(value);
+
 });
