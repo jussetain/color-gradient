@@ -2,12 +2,43 @@
 <html>
 
 <head>
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-  caca
-  <script src="https://cdn.jsdelivr.net/npm/smooth-gradient@2.1.1/index.js"></script>
+<body id="body">
+  <div class="container">
+    <div class="content">
+      <h1>smooth-gradient.js</h1>
+      <div class="gradients" id="gradients">
+        <div class="selector" id="selector">
+
+        </div>
+      </div>
+      <div class="infos">
+        <div class="info">
+          <div class="title">Value</div>
+          <div class="value" id="val">100%</div>
+        </div>
+        <div class="info info-l">
+          <div class="title">RGB</div>
+          <div class="value">RGB(
+            <span class="composite" id="r"></span>,
+            <span class="composite" id="g"></span>,
+            <span class="composite" id="b"></span>)
+          </div>
+        </div>
+        <div class="info">
+          <div class="title">Hex</div>
+          <div class="value" id="hex">#23C3D9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="https://cdn.jsdelivr.net/npm/smooth-gradient@2.2.2/dist/index.js"></script>-->
+  <script src="../dist/index.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

@@ -66,10 +66,10 @@ export default class Gradient {
   getColorFromValue = (value, format = 'hex') => {
     const subGradient = this.getSubGradient(value);
 
-    const totalWeight = (subGradient.to.value + subGradient.from.value)
+    const totalWeight = Math.round(subGradient.to.value - subGradient.from.value)
 
-    const leftWeight = totalWeight - Math.abs(subGradient.from.value - value);
-    const rightWeight = totalWeight - Math.abs(subGradient.to.value - value);
+    const leftWeight = Math.round(totalWeight - Math.abs(subGradient.from.value - value));
+    const rightWeight = Math.round(totalWeight - leftWeight);
 
     const red = Math.round(this.getWeightedAverage(subGradient.from.color.r, leftWeight, subGradient.to.color.r, rightWeight));
     const green = Math.round(this.getWeightedAverage(subGradient.from.color.g, leftWeight, subGradient.to.color.g, rightWeight));
