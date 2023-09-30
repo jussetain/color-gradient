@@ -14,9 +14,17 @@ body {
   color: #EEE;
 }
 
-h1 {
+
+
+.page-title {
   font-size: 5em;
 }
+
+a {
+  color: white;
+  margin-left: 20px;
+}
+
 
 h3 {
   margin-left: 7px;
@@ -184,7 +192,7 @@ h3 {
 }
 
 @media screen and (max-width: 1000px) {
-  h1 {
+  .page-title {
     font-size: 3em;
   }
 
