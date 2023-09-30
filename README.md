@@ -1,5 +1,6 @@
 
 smooth-gradient.js
+![Test](https://github.com/jussetain/color-gradient/actions/workflows/build_and_test.yml/badge.svg)
 ========================
 
 Calculate a gradient and get one of its colors at a given point, from an array of colors.
