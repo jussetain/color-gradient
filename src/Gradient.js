@@ -16,6 +16,7 @@ export default class Gradient {
    * @returns The subgradient composed of two colors
    */
   getSubGradient = (value) => {
+    if (isNaN(value)) value = 0;
     if (value < 0) value = 0;
     if (value > 100) value = 100;
     const subgradientIndex = Math.min(

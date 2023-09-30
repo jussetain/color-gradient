@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node src/test.js",
+    "test": "jest --coverage=true",
     "build": "webpack --mode=production"
   },
   "deprecated": false,
@@ -28,7 +28,18 @@
     "web": "https://jussetain.github.io/color-gradient/"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.23.0",
+    "jest": "^29.7.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
 }

@@ -1,15 +1,13 @@
 export default class Color {
   constructor(hex) {
-    const curated_hex = hex.replace('#', '');
-    if (curated_hex.length !== 3 && curated_hex.length !== 6) {
-      throw new Error('Hex color is not valid');
+    if (!Color.isValidHex(hex)) {
+      throw new Error('Hex value or color format is not valid');
     }
+
+    const curated_hex = hex.replace('#', '');
 
     const split_regex = curated_hex.length == 3 ? /.{1}/g : /.{1,2}/g
     const array_colors = curated_hex.match(split_regex);
-    if (array_colors.length !== 3) {
-      throw new Error('Could not get RGB parameters');
-    }
 
     this.r = Color.hexToDec(array_colors[0]);
     this.g = Color.hexToDec(array_colors[1]);
@@ -22,6 +20,9 @@ export default class Color {
     return parseInt(hex, 16);
   };
   static decToHex = (dec) => {
+    if (!/\d+/.test(dec)) {
+      return NaN;
+    }
     let hex = dec.toString(16);
     if (hex.length <= 1) {
       hex = "0" + hex;
