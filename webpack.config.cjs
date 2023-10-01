@@ -7,9 +7,9 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     library: {
-      type: "window",
+      type: 'window',
     },
   },
 };
 
-module.exports = config
+module.exports = config;

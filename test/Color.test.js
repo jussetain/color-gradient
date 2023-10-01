@@ -1,4 +1,4 @@
-import Color from "../src/Color.js";
+import Color from '../src/Color.js';
 
 const mockColor6 = new Color('#FF0000');
 const mockColor3 = new Color('#123');
@@ -18,7 +18,7 @@ test('should throw error on hex color format', () => {
     new Color('#1234');
     fail('it should not reach here');
   } catch (e) {
-    expect(e.message).toBe("Hex value or color format is not valid");
+    expect(e.message).toBe('Hex value or color format is not valid');
   }
 });
 
@@ -27,7 +27,7 @@ test('should throw error on hex value', () => {
     new Color('#AGA');
     fail('it should not reach here');
   } catch (e) {
-    expect(e.message).toBe("Hex value or color format is not valid");
+    expect(e.message).toBe('Hex value or color format is not valid');
   }
 });
 
@@ -72,7 +72,6 @@ describe('should hexToDec', () => {
   test('convert FF to 255', () => expect(Color.hexToDec('FF')).toBe(255));
   test('convert 00 to 0', () => expect(Color.hexToDec('00')).toBe(0));
   test('convert GRGR to NaN', () => expect(Color.hexToDec('GRGR')).toBe(NaN));
-
 });
 
 describe('should decToHex', () => {
@@ -80,6 +79,3 @@ describe('should decToHex', () => {
   test('convert 0 to 00', () => expect(Color.decToHex(0)).toBe('00'));
   test('convert FF to NaN', () => expect(Color.decToHex('FF')).toBe(NaN));
 });
-
-
-

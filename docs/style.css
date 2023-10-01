@@ -10,11 +10,13 @@ body {
   min-height: 100%;
   width: 100%;
   background: rgb(14, 14, 17);
-  background: linear-gradient(147deg, rgba(14, 14, 17, 1) 0%, rgba(50, 47, 69, 1) 100%);
-  color: #EEE;
+  background: linear-gradient(
+    147deg,
+    rgba(14, 14, 17, 1) 0%,
+    rgba(50, 47, 69, 1) 100%
+  );
+  color: #eee;
 }
-
-
 
 .page-title {
   font-size: 5em;
@@ -24,7 +26,6 @@ a {
   color: white;
   margin-left: 20px;
 }
-
 
 h3 {
   margin-left: 7px;
@@ -58,11 +59,11 @@ h3 {
   border: 6px solid white;
 }
 
-.gradients>.gradient:first-child {
+.gradients > .gradient:first-child {
   border-radius: 50px 0px 0px 50px;
 }
 
-.gradients>.gradient:last-child {
+.gradients > .gradient:last-child {
   border-radius: 0px 50px 50px 0px;
 }
 
@@ -97,6 +98,11 @@ h3 {
   text-align: center;
   border: 6px solid white;
   border-radius: 50%;
+}
+
+#rgb_val {
+  display: flex;
+  justify-content: center;
 }
 
 .infos {
@@ -138,12 +144,10 @@ h3 {
 
 .pink {
   color: rgb(188, 137, 187);
-  ;
 }
 
 .lblue {
   color: rgb(170, 218, 250);
-  ;
 }
 
 .blue {

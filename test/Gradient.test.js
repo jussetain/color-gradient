@@ -1,5 +1,5 @@
-import Gradient from "../src/Gradient.js";
-import Color from "../src/Color.js";
+import Gradient from '../src/Gradient.js';
+import Color from '../src/Color.js';
 
 const colors_3 = ['#FF0000', '#0000FF', '#FFFFFF'];
 const colors_5 = ['#FF0000', '#0000FF', '#FFFFFF', '#00FF00', '#FFFF00'];
@@ -7,12 +7,12 @@ const colors_3_wrong = ['#FF0000', '#0000FF', '#FFFFFF', '#FGEAMP'];
 
 test('should gradient be properly instanciated', () => {
   const gradient = new Gradient(...colors_3);
-  expect(gradient.colors).toStrictEqual(colors_3.map(c => new Color(c)));
+  expect(gradient.colors).toStrictEqual(colors_3.map((c) => new Color(c)));
 });
 
 test('should gradient be properly instanciated even with faulty values', () => {
   const gradient = new Gradient(...colors_3_wrong);
-  expect(gradient.colors).toStrictEqual(colors_3.map(c => new Color(c)));
+  expect(gradient.colors).toStrictEqual(colors_3.map((c) => new Color(c)));
 });
 
 test('should getColorsScale work', () => {
@@ -29,12 +29,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[0]),
-        value: 0
+        value: 0,
       },
       to: {
         color: new Color(colors_3[1]),
-        value: 50
-      }
+        value: 50,
+      },
     });
   });
   test('with value = 100', () => {
@@ -43,12 +43,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[1]),
-        value: 50
+        value: 50,
       },
       to: {
         color: new Color(colors_3[2]),
-        value: 100
-      }
+        value: 100,
+      },
     });
   });
   test('with value = 50', () => {
@@ -57,12 +57,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[1]),
-        value: 50
+        value: 50,
       },
       to: {
         color: new Color(colors_3[2]),
-        value: 100
-      }
+        value: 100,
+      },
     });
   });
   test('with value = -100', () => {
@@ -71,12 +71,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[0]),
-        value: 0
+        value: 0,
       },
       to: {
         color: new Color(colors_3[1]),
-        value: 50
-      }
+        value: 50,
+      },
     });
   });
   test('with value = 1000', () => {
@@ -85,12 +85,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[1]),
-        value: 50
+        value: 50,
       },
       to: {
         color: new Color(colors_3[2]),
-        value: 100
-      }
+        value: 100,
+      },
     });
   });
   test('with value = NaN', () => {
@@ -99,12 +99,12 @@ describe('should getSubGradient work', () => {
     expect(subgradient).toStrictEqual({
       from: {
         color: new Color(colors_3[0]),
-        value: 0
+        value: 0,
       },
       to: {
         color: new Color(colors_3[1]),
-        value: 50
-      }
+        value: 50,
+      },
     });
   });
 });
@@ -116,17 +116,20 @@ describe('should getWeightedAverage work', () => {
   });
   test('with values 1 9 1 1', () => {
     const gradient = new Gradient(...colors_3);
-    const value = Math.round(gradient.getWeightedAverage(9, 1, 1, 1) * 1000) / 1000
+    const value =
+      Math.round(gradient.getWeightedAverage(9, 1, 1, 1) * 1000) / 1000;
     expect(value).toBe(6.403);
   });
   test('with values 1 2 3 4', () => {
     const gradient = new Gradient(...colors_3);
-    const value = Math.round(gradient.getWeightedAverage(1, 2, 3, 4) * 1000) / 1000
+    const value =
+      Math.round(gradient.getWeightedAverage(1, 2, 3, 4) * 1000) / 1000;
     expect(value).toBe(2.517);
   });
   test('with values 255 34 121 66', () => {
     const gradient = new Gradient(...colors_3);
-    const value = Math.round(gradient.getWeightedAverage(255, 34, 121, 66) * 1000) / 1000
+    const value =
+      Math.round(gradient.getWeightedAverage(255, 34, 121, 66) * 1000) / 1000;
     expect(value).toBe(178.246);
   });
 });
@@ -177,7 +180,4 @@ describe('should getColorFromValue work', () => {
     expect(colorRgb).toBe('rgb(255, 255, 255)');
     expect(colorComposite).toStrictEqual([255, 255, 255]);
   });
-})
-
-
-
+});
