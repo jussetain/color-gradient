@@ -6,7 +6,7 @@ export default class Color {
 
     const curated_hex = hex.replace('#', '');
 
-    const split_regex = curated_hex.length == 3 ? /.{1}/g : /.{1,2}/g
+    const split_regex = curated_hex.length == 3 ? /.{1}/g : /.{1,2}/g;
     const array_colors = curated_hex.match(split_regex);
 
     this.r = Color.hexToDec(array_colors[0]);
@@ -25,7 +25,7 @@ export default class Color {
     }
     let hex = dec.toString(16);
     if (hex.length <= 1) {
-      hex = "0" + hex;
+      hex = '0' + hex;
     }
     return hex;
   };

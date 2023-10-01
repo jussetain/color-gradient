@@ -6,7 +6,7 @@ name: Test
 on:
   push:
     branches:
-    - '**'
+      - '**'
 
 jobs:
   build:
@@ -15,34 +15,34 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-    - name: Init GitHub Actions
-      uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Install modules
-      run: |
-        echo "Install modules..."
-        npm i
-        echo "Modules installed."
-    - name: Run tests
-      run: |
-        echo "Running tests..."
-        npm run test
-        echo "Tests ran."
-    - name: Run build
-      run: |
-        echo "Running build..."
-        npm run build
-        echo "Built."
-    - name: Deploy
-      run: |
-        if [ "${GITHUB_REF}" == "refs/heads/staging" ]
-        then
-          echo "staging ${GITHUB_REF}"
-        else
-          echo "not staging ${GITHUB_REF}"
-        fi
-      shell: bash
+      - name: Init GitHub Actions
+        uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install modules
+        run: |
+          echo "Install modules..."
+          npm i
+          echo "Modules installed."
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          npm run test
+          echo "Tests ran."
+      - name: Run build
+        run: |
+          echo "Running build..."
+          npm run build
+          echo "Built."
+      - name: Deploy
+        run: |
+          if [ "${GITHUB_REF}" == "refs/heads/staging" ]
+          then
+            echo "staging ${GITHUB_REF}"
+          else
+            echo "not staging ${GITHUB_REF}"
+          fi
+        shell: bash
