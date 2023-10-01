@@ -99,6 +99,11 @@ h3 {
   border-radius: 50%;
 }
 
+#rgb_val {
+  display: flex;
+  justify-content: center;
+}
+
 .infos {
   display: flex;
   flex-direction: row;
